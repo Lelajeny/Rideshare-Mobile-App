@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rideshare_app/Screen/authentication/enable_location.dart';
 import 'package:rideshare_app/core/configs/theme/app_colors.dart';
 import 'package:rideshare_app/Screen/onboarding/onboarding_2.dart'; // Adjust the path as needed
 
@@ -23,7 +24,7 @@ class _onboarding_3State extends State<onboarding_3> {
                   onPressed: () {
                        Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const Onboarding2()),
+              MaterialPageRoute(builder: (context) => const enable_location()),
             );
                   },
                   child: Text(
@@ -76,7 +77,7 @@ class _onboarding_3State extends State<onboarding_3> {
                       onTap: () {
                                    Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const Onboarding2()),
+              MaterialPageRoute(builder: (context) => const enable_location()),
             );
                       },
                       child: Container(
