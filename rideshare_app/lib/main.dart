@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rideshare_app/Screen/onboarding/01_Onboarding.dart';
+import 'package:rideshare_app/Screen/onboarding/onboarding_3.dart';
 
 import 'Screen/onboarding/onboarding_1.dart';
 

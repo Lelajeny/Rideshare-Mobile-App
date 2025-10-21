@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:rideshare_app/Screen/onboarding/onboarding_3.dart';
 import 'package:rideshare_app/core/configs/theme/app_colors.dart';
+import 'package:rideshare_app/Screen/onboarding/onboarding_2.dart'; // Adjust the path as needed
 
-class Onboarding2 extends StatefulWidget {
-  const Onboarding2({super.key});
+class onboarding_3 extends StatefulWidget {
+  const onboarding_3({super.key});
 
   @override
-  State<Onboarding2> createState() => _Onboarding2State();
+  State<onboarding_3> createState() => _onboarding_3State();
 }
 
-class _Onboarding2State extends State<Onboarding2> {
+class _onboarding_3State extends State<onboarding_3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,9 +21,9 @@ class _Onboarding2State extends State<Onboarding2> {
                 margin: EdgeInsets.only(top: 50, left: 300),
                 child: TextButton(
                   onPressed: () {
-                         Navigator.push(
+                       Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const onboarding_3()),
+              MaterialPageRoute(builder: (context) => const Onboarding2()),
             );
                   },
                   child: Text(
@@ -41,11 +41,11 @@ class _Onboarding2State extends State<Onboarding2> {
                 margin: EdgeInsets.only(top: 60),
                 child: Column(
                   children: [
-                    Center(child: Image.asset('assets/images/on2.png')),
+                    Center(child: Image.asset('assets/images/on3.png')),
                     Container(
                       margin: EdgeInsets.only(top: 20),
                       child: Text(
-                        'At anytime',
+                        'Book your car',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 24,
@@ -74,9 +74,9 @@ class _Onboarding2State extends State<Onboarding2> {
                     // Circular button
                     GestureDetector(
                       onTap: () {
-                              Navigator.push(
+                                   Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const onboarding_3()),
+              MaterialPageRoute(builder: (context) => const Onboarding2()),
             );
                       },
                       child: Container(
@@ -97,10 +97,11 @@ class _Onboarding2State extends State<Onboarding2> {
                             color: AppColors.primary,
                           ),
                           child: const Center(
-                            child: Icon(
-                              Icons.arrow_forward,
-                              color: Color(0xff5A5A5A),
-                              size: 32,
+                            child: Text(
+                              'Go',
+                              style: TextStyle(color: Color(0xff5A5A5A),
+                              fontSize: 18),
+                             
                             ),
                           ),
                         ),
