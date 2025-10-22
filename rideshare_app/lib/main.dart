@@ -4,6 +4,8 @@ import 'package:rideshare_app/Screen/settings/settings.dart';
 
 import 'Screen/onboarding/onboarding_1.dart';
 
+import 'package:rideshare_app/Screen/settings/settings1.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -23,10 +25,15 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
 
-      home: const Settings(),
+
 
       
+
+
+            home: const Onboarding_1(),
     );
   }
 }
+ 
+
 
