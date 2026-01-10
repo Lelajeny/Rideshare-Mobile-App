@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rideshare_app/Screen/authentication/enable_location.dart';
 import 'package:rideshare_app/core/configs/theme/app_colors.dart';
-import 'package:rideshare_app/Screen/onboarding/onboarding_2.dart'; // Adjust the path as needed
+// Adjust the path as needed
 
 class onboarding_3 extends StatefulWidget {
   const onboarding_3({super.key});

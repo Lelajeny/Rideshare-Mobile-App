@@ -7,8 +7,11 @@
       "name": "rideshare_app",
       "version": "1.0.0+1",
       "dependencies": [
+        "country_picker",
         "cupertino_icons",
-        "flutter"
+        "flutter",
+        "get",
+        "intl_phone_field"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -44,6 +47,30 @@
       "name": "cupertino_icons",
       "version": "1.0.8",
       "dependencies": []
+    },
+    {
+      "name": "country_picker",
+      "version": "2.0.27",
+      "dependencies": [
+        "collection",
+        "flutter",
+        "universal_io"
+      ]
+    },
+    {
+      "name": "intl_phone_field",
+      "version": "3.2.0",
+      "dependencies": [
+        "flutter"
+      ]
+    },
+    {
+      "name": "get",
+      "version": "4.7.2",
+      "dependencies": [
+        "flutter",
+        "web"
+      ]
     },
     {
       "name": "flutter",
@@ -147,6 +174,20 @@
       ]
     },
     {
+      "name": "universal_io",
+      "version": "2.2.2",
+      "dependencies": [
+        "collection",
+        "meta",
+        "typed_data"
+      ]
+    },
+    {
+      "name": "web",
+      "version": "1.1.1",
+      "dependencies": []
+    },
+    {
       "name": "sky_engine",
       "version": "0.0.0",
       "dependencies": []
@@ -224,6 +265,13 @@
       "name": "vm_service",
       "version": "15.0.2",
       "dependencies": []
+    },
+    {
+      "name": "typed_data",
+      "version": "1.4.0",
+      "dependencies": [
+        "collection"
+      ]
     }
   ],
   "configVersion": 1

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rideshare_app/Screen/onboarding/onboarding_3.dart';
-import 'package:rideshare_app/Screen/settings/settings.dart';
 
 import 'Screen/onboarding/onboarding_1.dart';
 
@@ -23,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
 
-      home: const Settings(),
+      home: const Onboarding_1(),
 
       
     );

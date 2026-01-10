@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rideshare_app/Screen/authentication/welcomepage.dart';
 import 'package:rideshare_app/core/configs/theme/app_colors.dart';
 
 
@@ -120,7 +121,10 @@ class _enable_locationState extends State<enable_location> {
                  
                   TextButton(
                     onPressed: () {
-                      
+                      Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Welcomepage()),
+            );
                     },
                     child: const Text(
                       "Skip for now",
