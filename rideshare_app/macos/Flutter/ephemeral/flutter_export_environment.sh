@@ -3,11 +3,16 @@
 export "FLUTTER_ROOT=C:\flutter src\flutter"
 export "FLUTTER_APPLICATION_PATH=C:\Users\Kiseki\Documents\GitHub\Rideshare-Mobile-App\rideshare_app"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
+export "FLUTTER_TARGET=/Users/new/Desktop/FLUTTER PROJECTS/GITHUB/Rideshare-Mobile-App/Rideshare-Mobile-App/rideshare_app/lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"
+
+export "DART_DEFINES=RkxVVFRFUl9WRVJTSU9OPTMuMzUuNA==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049ZDY5M2I0YjlkYg==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049YzI5ODA5MTM1MQ==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My45LjI="
+
 export "FLUTTER_CLI_BUILD_MODE=debug"
+
 export "DART_OBFUSCATION=false"
 export "TRACK_WIDGET_CREATION=true"
 export "TREE_SHAKE_ICONS=false"
-export "PACKAGE_CONFIG=.dart_tool/package_config.json"
+export "PACKAGE_CONFIG=/Users/new/Desktop/FLUTTER PROJECTS/GITHUB/Rideshare-Mobile-App/Rideshare-Mobile-App/rideshare_app/.dart_tool/package_config.json"
