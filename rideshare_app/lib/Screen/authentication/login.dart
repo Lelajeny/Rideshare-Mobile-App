@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:intl_phone_field/country_picker_dialog.dart';
-
-class SignupScreen extends StatefulWidget {
-  const SignupScreen({super.key});
+import 'package:rideshare_app/Screen/authentication/forgotpassword.dart';
+import 'package:rideshare_app/Screen/authentication/send_verification.dart';
+import 'package:rideshare_app/Screen/authentication/signup.dart';
+import 'package:rideshare_app/core/configs/theme/app_colors.dart';
+class Login extends StatefulWidget {
+  const Login({super.key});
 
   @override
-  State<SignupScreen> createState() => _SignupScreenState();
+  State<Login> createState() => _LoginState();
 }
-
-class _SignupScreenState extends State<SignupScreen> {
-  final _formKey = GlobalKey<FormState>();
+final _formKey = GlobalKey<FormState>();
   String? selectedGender;
   String phoneNumber = "";
-
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
+        appBar: AppBar(
+       // backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
         title: Row(
@@ -44,111 +47,62 @@ class _SignupScreenState extends State<SignupScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         child: Form(
           key: _formKey,
-          child: Column(
+          child:  Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 10),
-              const Text(
-                "Sign up with your email or phone number",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black87,
-                ),
-              ),
-              const SizedBox(height: 24),
+               SizedBox(height: 10),
+              Text('Sign in with your email or phone number', 
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.black87,),),
 
-              // Name field
-              TextFormField(
-                decoration: InputDecoration(
-                  hintText: "Name",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 16),
+
+                SizedBox(height: 24),
 
               // Email field
               TextFormField(
                 decoration: InputDecoration(
-                  hintText: "Email",
+                  hintText: "Email or Phone Number",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                keyboardType: TextInputType.emailAddress,
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: 16),
 
-              // ✅ International Phone Field (with flag + code)
-              IntlPhoneField(
+              // password field
+              TextFormField(
                 decoration: InputDecoration(
-                  hintText: "Your mobile number",
+                  hintText: "Password",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
-                ),
-                initialCountryCode: 'BD', // default: Bangladesh
-                pickerDialogStyle: PickerDialogStyle(
-                  searchFieldInputDecoration: const InputDecoration(
-                    hintText: "Search country",
+                  suffixIcon: IconButton(onPressed: () {},
+                   icon: Icon(Icons.visibility_off)),
                   ),
-                ),
-                onChanged: (phone) {
-                  setState(() {
-                    phoneNumber = phone.completeNumber;
-                  });
-                },
+                  obscureText: true,
+                keyboardType: TextInputType.visiblePassword,
               ),
-              const SizedBox(height: 16),
 
-              // Gender Dropdown
-              DropdownButtonFormField<String>(
-                initialValue: selectedGender,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-                hint: const Text("Gender"),
-                items: const [
-                  DropdownMenuItem(value: "Male", child: Text("Male")),
-                  DropdownMenuItem(value: "Female", child: Text("Female")),
-                  DropdownMenuItem(value: "Other", child: Text("Other")),
-                ],
-                onChanged: (value) => setState(() => selectedGender = value),
-              ),
-              const SizedBox(height: 16),
-
-              // Terms & Privacy
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Icon(Icons.check_circle, color: Colors.green, size: 20),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Wrap(
-                      children: const [
-                        Text("By signing up, you agree to the "),
-                        Text(
-                          "Terms of service",
-                          style: TextStyle(color: Colors.green),
-                        ),
-                        Text(" and "),
-                        Text(
-                          "Privacy policy.",
-                          style: TextStyle(color: Colors.green),
-                        ),
-                      ],
+              Container(
+                margin: EdgeInsets.only(left: 195,top: 10),
+                child: GestureDetector(
+                  onTap: () {
+                    Get.to(() => SendVerification());
+                  },
+                  child: Text(
+                    "Forgot Password?",
+                    style: TextStyle(
+                      color: AppColors.secondprimary,
+                      decoration: TextDecoration.underline,
                     ),
                   ),
-                ],
+                ),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
 
-              // Sign Up button
-              SizedBox(
+               SizedBox(
                 width: double.infinity,
                 height: 50,
                 child: ElevatedButton(
@@ -158,13 +112,13 @@ class _SignupScreenState extends State<SignupScreen> {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green,
+                    backgroundColor: AppColors.secondprimary,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                   child: const Text(
-                    "Sign Up",
+                    "Log In",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -173,7 +127,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 24),
+    SizedBox(height: 20,),
 
               // OR divider
               Row(
@@ -203,26 +157,34 @@ class _SignupScreenState extends State<SignupScreen> {
                 icon: Icons.apple,
                 text: "Sign up with Apple",
               ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 18),
 
               // Already have an account
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text("Already have an account? "),
-                  Text(
-                    "Sign in",
-                    style: TextStyle(color: Colors.green),
+                children:  [
+                  Text("Don't have an account? "),
+                  TextButton(
+                onPressed: () {
+                  Get.to(() => Signup());
+                },
+                child: Text(
+                    "Sign up",
+                    style: TextStyle(color: AppColors.secondprimary),
                   ),
+                ),
                 ],
               ),
               const SizedBox(height: 40),
+
             ],
           ),
         ),
       ),
     );
   }
+}
+
 
   // 🔁 Reusable Social Button Widget
   Widget _buildSocialButton({required IconData icon, required String text}) {
@@ -245,4 +207,4 @@ class _SignupScreenState extends State<SignupScreen> {
       ),
     );
   }
-}
+

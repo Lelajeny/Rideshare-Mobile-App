@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rideshare_app/Screen/authentication/si.dart';
 import 'package:rideshare_app/Screen/authentication/signup.dart';
+import 'package:rideshare_app/Screen/authentication/login.dart';
 import 'package:rideshare_app/core/configs/theme/app_colors.dart';
 import 'package:get/get.dart';
 
@@ -59,7 +59,7 @@ class _WelcomepageState extends State<Welcomepage> {
                 onPressed: () {
                   Navigator.of(
                     context,
-                  ).push(MaterialPageRoute(builder: (context) => SignupScreen()));
+                  ).push(MaterialPageRoute(builder: (context) => Signup()));
                 },
                 child: const Text(
                   "Create an account",
@@ -86,10 +86,10 @@ class _WelcomepageState extends State<Welcomepage> {
                 ),
 
                 onPressed: () {
-                  Get.to(() => Signup());
+                  Get.to(() => Login());
                 },
                 child: const Text(
-                  "log in",
+                  "Log in",
                   style: TextStyle(
                     color: AppColors.secondprimary,
                     fontWeight: FontWeight.w400,
