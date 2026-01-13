@@ -7,6 +7,8 @@ import 'app_colors.dart';
 class AppTheme {
   static final appTheme = ThemeData(
     primaryColor: AppColors.primary,
+    primaryColorLight: AppColors.secondprimary ,
+        
 
     scaffoldBackgroundColor: AppColors.background ,
     
