@@ -71,6 +71,8 @@ class _SendVerificationState extends State<SendVerification> {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>VerifyOtp()))
+
                     if (_formKey.currentState!.validate()) {
                       print("Phone number: $phoneNumber");
                     }

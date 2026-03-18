@@ -93,7 +93,7 @@ class _SignupState extends State<Signup> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                initialCountryCode: 'BD', // default: Bangladesh
+                initialCountryCode: 'GH', // default: Bangladesh
                 pickerDialogStyle: PickerDialogStyle(
                   searchFieldInputDecoration: const InputDecoration(
                     hintText: "Search country",
@@ -157,6 +157,8 @@ class _SignupState extends State<Signup> {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const Login()));
+                    
                     if (_formKey.currentState!.validate()) {
                       print("Phone number: $phoneNumber");
                     }
