@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rideshare_app/core/configs/theme/app_colors.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -146,7 +147,7 @@ class _SettingsPageState extends State<SettingsPage> {
         style: const TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.bold,
-          color: Colors.grey,
+          color: AppColors.grey600,
         ),
       ),
     );

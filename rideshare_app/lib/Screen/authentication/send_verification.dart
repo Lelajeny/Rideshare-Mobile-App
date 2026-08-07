@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rideshare_app/Screen/authentication/verify_otp.dart';
 import 'package:rideshare_app/core/configs/theme/app_colors.dart';
 
 class SendVerification extends StatefulWidget {
@@ -71,7 +72,7 @@ class _SendVerificationState extends State<SendVerification> {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) =>VerifyOtp()))
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>VerifyOtp()));
 
                     if (_formKey.currentState!.validate()) {
                       print("Phone number: $phoneNumber");

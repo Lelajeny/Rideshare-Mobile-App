@@ -248,7 +248,7 @@ class _SignupState extends State<Signup> {
           style: const TextStyle(color: Colors.black),
         ),
         style: OutlinedButton.styleFrom(
-          side: BorderSide(color: Colors.grey.shade400),
+          side: const BorderSide(color: AppColors.textColor),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),

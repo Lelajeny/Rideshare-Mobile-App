@@ -4,6 +4,7 @@ import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:intl_phone_field/country_picker_dialog.dart';
 import 'package:rideshare_app/Screen/authentication/forgotpassword.dart';
+import 'package:rideshare_app/Screen/Nav%20Bar/navBar.dart';
 import 'package:rideshare_app/Screen/authentication/send_verification.dart';
 import 'package:rideshare_app/Screen/authentication/signup.dart';
 import 'package:rideshare_app/core/configs/theme/app_colors.dart';
@@ -108,7 +109,7 @@ class _LoginState extends State<Login> {
                 child: ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      print("Phone number: $phoneNumber");
+                      Get.offAll(() => const Navbar());
                     }
                   },
                   style: ElevatedButton.styleFrom(
@@ -199,7 +200,7 @@ class _LoginState extends State<Login> {
           style: const TextStyle(color: Colors.black),
         ),
         style: OutlinedButton.styleFrom(
-          side: BorderSide(color: Colors.grey.shade400),
+          side: const BorderSide(color: AppColors.textColor),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),

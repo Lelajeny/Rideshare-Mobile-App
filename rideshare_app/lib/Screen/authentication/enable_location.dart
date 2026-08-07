@@ -29,7 +29,7 @@ class _enable_locationState extends State<enable_location> {
           // Semi-transparent overlay for better readability
           Positioned.fill(
             child: Container(
-              color: Colors.grey.withOpacity(0.3),
+              color: AppColors.grey.withValues(alpha: 0.3),
             ),
           ),
 
@@ -86,7 +86,7 @@ class _enable_locationState extends State<enable_location> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 14,
-                      color: Colors.grey,
+                      color: AppColors.textColor,
                     ),
                   ),
 
@@ -129,7 +129,7 @@ class _enable_locationState extends State<enable_location> {
                     child: const Text(
                       "Skip for now",
                       style: TextStyle(
-                        color: Colors.grey,
+                        color: AppColors.textColor,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
